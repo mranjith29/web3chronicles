@@ -53,6 +53,11 @@ app.post("/api/upload",upload.single("file"),(req,res)=>{
     res.status(200).json("Image has been uploaded successfully!")
 })
 
+//production script
+app.use(express.static("./frontend/dist"));
+app.get("*", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"frontend","dist","index.html"))
+});
 
 app.listen(process.env.PORT,()=>{
     connectDB()
