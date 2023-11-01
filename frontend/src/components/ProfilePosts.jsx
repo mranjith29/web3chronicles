@@ -5,6 +5,7 @@ const ProfilePosts = ({p}) => {
   // console.log(p)
   return (
     <div className="w-full flex mt-8 space-x-4 bg-gray-900 text-white rounded-md p-6">
+    {/* right */}
     <div className="flex flex-col w-[65%]">
         <h1 className="text-2xl font-bold mb-2">{p.title}</h1>
         <div className="flex mb-2 text-xs text-gray-400 items-center justify-between">
