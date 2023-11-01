@@ -22,7 +22,7 @@ const Comment = ({c,post}) => {
   // console.log(post)
   // console.log(user)
   return (
-    <div className="px-4 py-3 bg-gray-900 rounded-lg my-2 text-white">
+    <div className="px-4 py-3 bg-gray-900 rounded-lg my-2 text-white border-l-4 border-green-500">
     <div className="flex items-center justify-between">
         <h3 className="font-bold text-green-400">@{c.author}</h3>
         <div className="flex justify-center items-center space-x-4">
@@ -30,7 +30,7 @@ const Comment = ({c,post}) => {
             <p className="text-gray-400">{new Date(c.updatedAt).toLocaleTimeString()}</p>
             {user?._id === c?.userId &&
                 <div className="flex items-center justify-center space-x-2">
-                    <p className="cursor-pointer text-red-500" onClick={() => deleteComment(c._id)}>
+                    <p className="cursor-pointer text-red-500 hover:text-red-600" onClick={() => deleteComment(c._id)}>
                         <MdDelete />
                     </p>
                 </div>
